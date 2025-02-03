@@ -9,7 +9,7 @@ const ProductList = () => {
     try {
       const response = await fetch("https://themewagon.github.io/feane/");
       const data = await response.json();
-      setProducts(data);
+      setProducts(data.products || data)
     } catch (error) {
       console.error("Error fetching products:", error);
     }
