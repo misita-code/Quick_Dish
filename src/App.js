@@ -5,10 +5,14 @@ import UserProfile from './components/UserProfile'
 function App() {
   return (
     <div>
+        <h1>QuickDish</h1>
         <Productname />
         <Productlist />
-        <AdminDashboard />
-        <UserProfile />
+        <AdminProvider>
+          <UserProfile />
+        
+          <AdminDashboard /> 
+        </AdminProvider>
     </div>
   )
 }
