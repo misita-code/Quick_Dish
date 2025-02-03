@@ -7,9 +7,9 @@ const ProductList = () => {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const response = await fetch("https.//themewagon.github.io/feane/");
+      const response = await fetch("https://themewagon.github.io/feane/");
       const data = await response.json();
-      setProducts(data); // Set fetched products
+      setProducts(data.products || data)
     } catch (error) {
       console.error("Error fetching products:", error);
     }
